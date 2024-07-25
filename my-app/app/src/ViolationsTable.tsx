@@ -18,11 +18,11 @@ const ViolationsTable = () =>{
           <Header />
         </div>
 
-        <div className="col-span-1 row-span-1 broder border-[#C4C4C4">
+        <div className="col-span-1 row-span-1">
           <SubPages />
         </div>
         
-        <div className="text-white col-span-1 row-span-1 bg-[black]">
+        <div className="text-white col-span-1 row-span-1 bg-[#F2F2F2]">
           <p>Hello Content...</p>
       </div>
     </div>

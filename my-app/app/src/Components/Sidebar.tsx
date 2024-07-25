@@ -27,10 +27,10 @@ const Sidebar : React.FC = () => {
 
 
   return (
-    <div ref={ref}>
-      <div className="w-full h-full bg-[red] border-b border-[#C4C4C4]">
+    <div ref={ref} className="">
+      <div className="w-full h-full">
         <div
-          className={`fixed transition-width h-full bg-white  duration-300 ] ${
+          className={`border border-[#C4C4C4] fixed transition-width h-full bg-white  duration-300 ] ${
             isOpen ? "w-[250px]" : "w-[65px]"
           }`}
         >
