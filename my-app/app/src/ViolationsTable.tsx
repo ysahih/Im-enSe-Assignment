@@ -1,37 +1,16 @@
 import Header from "./Components/Header";
+import Sidebar from "./Components/Sidebar";
 import SubPages from "./Components/SubPages";
 
-// const Left = ()=>{
-//   return (
-//     <div className="text-black">
-//       <h1>Overview1</h1>
-//     </div>
-//   )
-// }
 
-// const Right = ()=>{
-//   return (
-//     <div className="text-black">
-//       <h1>Overview2</h1>
-//     </div>
-//   )
-// }
-
-
-const Sidebar = ()=>{
-    return (
-      <div className="">
-            
-        </div>
-    );
-}
 
 
 
 const ViolationsTable = () =>{
+
     return (
       <div className="w-full h-screen grid grid-cols-[65px_1fr] grid-rows-[60px_35px_1fr]">
-        <div className="row-span-3 col-span-1 bg-[red]">
+        <div className="row-span-3 col-span-1">
           <Sidebar />
         </div>
 
@@ -39,7 +18,7 @@ const ViolationsTable = () =>{
           <Header />
         </div>
 
-        <div className="col-span-1 row-span-1">
+        <div className="col-span-1 row-span-1 broder border-[#C4C4C4">
           <SubPages />
         </div>
         
