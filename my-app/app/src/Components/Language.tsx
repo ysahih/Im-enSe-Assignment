@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useClickAway } from "@uidotdev/usehooks";
 
 const Language = () => {
 
@@ -7,7 +8,10 @@ const Language = () => {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
-    
+  
+  const ref = useClickAway(() => {
+    setIsDropdownOpen(false);
+  });
     return (
         <div className="flex items-center">
               <button
@@ -56,7 +60,8 @@ const Language = () => {
               </button>
               {isDropdownOpen && (
                 <div
-                  className="absolute top-14 right-[230px] list-none bg-white text-[red] rounded-lg shadow"
+                  className="absolute top-14 right-[230px] list-none bg-white text-[red] rounded-lg shadow" 
+                  ref={ref} 
                   id="language-dropdown-menu"
                 >
                   <ul className="py-2" role="none">

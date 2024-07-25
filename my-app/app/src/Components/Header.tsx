@@ -7,7 +7,7 @@ import NavIcons from "./NavIcons";
 import Profile from "./Profile";
 
 const Header = ()=>{
-
+    
   
         return (
           <nav className="bg-white border-b border-[#C4C4C4]">

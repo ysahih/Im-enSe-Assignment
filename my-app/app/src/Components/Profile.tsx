@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { RiSettings5Fill } from "react-icons/ri";
 import { MdOutlineLocalPolice } from "react-icons/md";
 import { RiLogoutBoxRFill } from "react-icons/ri";
+import { useClickAway } from "@uidotdev/usehooks";
+
 
 
 
@@ -12,6 +14,9 @@ const Profile = () => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+  const ref = useClickAway(() => {
+    setIsOpen(false);
+  });
 
   return (
     <div className="flex items-center justify-center gap-2 w-[280px] font-medium text-sm text-[#7A7A7A]">
@@ -30,7 +35,7 @@ const Profile = () => {
           <Image src="/Arrow.svg" alt='Icon' width={14} height={10} />
         </div>
       {isOpen && (
-        <div className="absolute top-14 right-0 list-none bg-white rounded-lg shadow" id="user-dropdown">
+        <div className="absolute top-14 right-0 list-none bg-white rounded-lg shadow" id="user-dropdown" ref={ref}>
           <div className="px-4 py-3">
             <span className="block text-sm  text-gray-900 ">BESIX Group</span>
             <span className="block text-xs font-small text-gray-500 truncate ">besix.group@besix.be</span>
