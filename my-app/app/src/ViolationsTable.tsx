@@ -1,27 +1,21 @@
-const Left = ()=>{
-  return (
-    <div className="text-black">
-      <h1>Overview1</h1>
-    </div>
-  )
-}
+import Header from "./Components/Header";
 
-const Right = ()=>{
-  return (
-    <div className="text-black">
-      <h1>Overview2</h1>
-    </div>
-  )
-}
+// const Left = ()=>{
+//   return (
+//     <div className="text-black">
+//       <h1>Overview1</h1>
+//     </div>
+//   )
+// }
 
-const Header = ()=>{
-    return (
-      <div className="flex items-center justify-between h-full">
-        <Left/>
-        <Right/>
-      </div>
-    )
-}
+// const Right = ()=>{
+//   return (
+//     <div className="text-black">
+//       <h1>Overview2</h1>
+//     </div>
+//   )
+// }
+
 
 const Sidebar = ()=>{
     return (
