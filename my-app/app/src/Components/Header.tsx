@@ -10,7 +10,7 @@ const Header = ()=>{
 
   
         return (
-          <nav className="bg-white">
+          <nav className="bg-white border-b border-[#C4C4C4]">
             <div className=" flex items-center justify-between mx-auto p-4">
 
               <div className="flex items-center gap-3">

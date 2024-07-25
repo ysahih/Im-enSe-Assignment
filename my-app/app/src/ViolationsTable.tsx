@@ -1,4 +1,5 @@
 import Header from "./Components/Header";
+import SubPages from "./Components/SubPages";
 
 // const Left = ()=>{
 //   return (
@@ -26,12 +27,6 @@ const Sidebar = ()=>{
 }
 
 
-const SubPages = ()=>{
-    return (
-      <div className="">
-      </div>
-    )
-}
 
 const ViolationsTable = () =>{
     return (
@@ -40,15 +35,15 @@ const ViolationsTable = () =>{
           <Sidebar />
         </div>
 
-        <div className="col-span-1 row-span-1 bg-[blue]">
+        <div className="col-span-1 row-span-1 ">
           <Header />
         </div>
 
-        <div className="col-span-1 row-span-1 bg-[yellow]">
+        <div className="col-span-1 row-span-1">
           <SubPages />
         </div>
         
-        <div className="col-span-1 row-span-1 bg-[black]">
+        <div className="text-white col-span-1 row-span-1 bg-[black]">
           <p>Hello Content...</p>
       </div>
     </div>

@@ -48,7 +48,7 @@ const Profile = () => {
               <a href="#" className="block text-sm text-gray-700 ">Our policies</a>
             </li>
 
-            <hr className=''/>
+            <hr className='pb-2'/>
             <li className='flex align-center px-4 py-2 gap-1'>
               <RiLogoutBoxRFill className='size-[20px]'/>
               <a href="#" className="block text-sm text-gray-700 ">Log out</a>
