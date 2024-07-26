@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^6.6.0",
-    "@fortawesome/react-fontawesome": "github:fortawesome/react-fontawesome",
-    "@syncfusion/ej2-react-grids": "^26.2.4",
-    "@uidotdev/usehooks": "^2.4.1"
-  }
-}

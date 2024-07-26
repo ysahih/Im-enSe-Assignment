@@ -2,11 +2,16 @@
 
 import { IoMenuOutline } from "react-icons/io5";
 import { useState } from "react";
-import Language from "./Language";
-import NavIcons from "./NavIcons";
-import Profile from "./Profile";
+import Language from "./Header/Language";
+import NavIcons from "./Header/NavIcons";
+import Profile from "./Header/Profile";
 
-const Header = ()=>{
+
+interface HeaderProps {
+  toggle: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({toggle }) => {
     
   
         return (
@@ -14,7 +19,7 @@ const Header = ()=>{
             <div className=" flex items-center justify-between mx-auto p-4">
 
               <div className="flex items-center gap-3">
-                <IoMenuOutline className="size-[20px] text-[#B4B4B4]" />
+                <IoMenuOutline className="size-[25px] cursor-pointer text-[#B4B4B4]" onClick={toggle} />
                 <a href="/" className="">
                  <span className="text-l font-medium text-black">Overview</span>
                 </a>

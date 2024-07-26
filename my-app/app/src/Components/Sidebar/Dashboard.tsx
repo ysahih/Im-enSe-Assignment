@@ -10,12 +10,12 @@ const Dashboard: React.FC<Props> = ({ isOpen }) => {
     const [showPopup, setShowPopup] = useState(false);
 
     return (
-        <div className={`relative inline-block flex items-center justify-center px-2 gap-2 h-10 cursor-pointer hover:text-[#42A4DF] rounded-md ${isOpen ? ' hover:text-white hover:bg-[#42A4DF]' : '' }`}
+        <div className={`relative inline-block flex items-center justify-center px-2 gap-2 h-10 cursor-pointer rounded-md text-[#C4C4C4] ${isOpen ? ' hover:text-white hover:bg-[#42A4DF]' : '' }`}
 
           onMouseEnter={() => setShowPopup(true)}
           onMouseLeave={() => setShowPopup(false)}
         >
-          <AiOutlineHome className="size-[20px]" />
+          <AiOutlineHome className={`size-[20px] ${isOpen ? '': 'hover:text-[#42A4DF]' }`}  />
         {showPopup && !isOpen && (
           <div className="absolute left-14 w-[80px] bg-[#343434] text-white text-center py-2 text-xs rounded shadow-lg  z-10">
             Dashboard
@@ -24,8 +24,8 @@ const Dashboard: React.FC<Props> = ({ isOpen }) => {
             </div>
           </div>
         )}
-        <span className={`flex items-center transition-width duration-200 text-[#626262] whitespace-nowrap  ${isOpen ? "w-full transition-none" : "hidden"}`}>
-        Dashboard
+        <span className={`hover-tip flex items-center transition-width duration-200 whitespace-nowrap text-[#626262] hover:text-white  ${isOpen ? "w-full h-full transition-none" : "hidden"}`}>
+          Dashboard
         </span>
        </div>
     )

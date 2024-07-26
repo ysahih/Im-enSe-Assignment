@@ -12,13 +12,13 @@ const Violarions: React.FC<Props> = ({ isOpen }) => {
     const [showPopup, setShowPopup] = useState(false);
 
     return (
-      <div className={`relative inline-block flex items-center justify-center px-2 gap-3 h-10 cursor-pointer hover:text-[#42A4DF] rounded-md ${isOpen ? 'hover:text-white hover:bg-[#42A4DF]' : '' }`}
+      <div className={`relative inline-block flex items-center justify-center px-2 gap-2 h-10 cursor-pointer rounded-md  text-[#C4C4C4] ${isOpen ? 'text-white bg-[#42A4DF]' : '' }`}
        
           onMouseEnter={() => setShowPopup(true)}
           onMouseLeave={() => setShowPopup(false)}
 
         >
-          <MdFrontHand className={`size-[12px] rounded-full outline outline-[1px] outline-[#42A4DF] outline-offset-2 text-[#42A4DF] ${isOpen ? 'ml-1' : ''}`}/>
+          <MdFrontHand className={`size-[12px] rounded-full outline outline-[1px] outline-[#42A4DF] outline-offset-2 text-[#42A4DF] ${isOpen ? 'ml-1 text-[white] outline-white' : 'hover:text-[#42A4DF]'}`}/>
         {showPopup && !isOpen && (
           <div className="absolute left-14 w-[80px] bg-[#343434] text-white text-center py-2 text-xs rounded shadow-lg  z-10">
            P.P.E Violarions
@@ -27,7 +27,7 @@ const Violarions: React.FC<Props> = ({ isOpen }) => {
             </div>
           </div>
         )}
-        <span className={`transition-width duration-200 ${isOpen ? "w-full hover:text-white transition-none" : "hidden"} text-[#626262] whitespace-nowrap`}>
+        <span className={`flex items-center transition-width duration-200 whitespace-nowrap text-white ${isOpen ? "h-full w-full transition-none" : "hidden"}`}>
         P.P.E Violarions
         </span>
        </div>

@@ -2,11 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useClickAway } from "@uidotdev/usehooks";
-
-
-
-
-
+import { IoMenuOutline } from "react-icons/io5";
 import Workers from "./Sidebar/Workers";
 import Contracotrs from "./Sidebar/Contractors";
 import Dashboard from "./Sidebar/Dashboard";
@@ -15,14 +11,17 @@ import PPEs from "./Sidebar/PPEs";
 
 
 
+interface Props {
+  isOpen: boolean;
+  toggle: () => void;
+}
+
+const Sidebar :  React.FC<Props> = ({ isOpen, toggle }) => {
 
 
-const Sidebar : React.FC = () => {
 
-  const [isOpen, setIsOpen] = useState(false);
-  const handleTrigger = () => setIsOpen(!isOpen);
   const ref = useClickAway(() => {
-    setIsOpen(false);
+    toggle();
   });
 
 
@@ -30,18 +29,27 @@ const Sidebar : React.FC = () => {
     <div ref={ref} className="">
       <div className="w-full h-full">
         <div
-          className={`border border-[#C4C4C4] fixed transition-width h-full bg-white  duration-300 ] ${
+          className={`border border-[#C4C4C4] fixed transition-width h-full bg-white duration-300 ] ${
             isOpen ? "w-[250px]" : "w-[65px]"
           }`}
         >
           <div
             className="flex items-center justify-center h-[64px] cursor-pointer"
-            onClick={handleTrigger}
           >
-            <Image src="/logo.svg" alt='Logo' width={35} height={35} />
+            { isOpen ? (
+              <div className="flex items-center gap-2" >
+                <a href="/">
+                  <Image src="/toggledlogo.svg" alt='Logo' width={190} height={35} />
+                </a>
+                <IoMenuOutline className="size-[25px] text-[#B4B4B4]" onClick={toggle}/>
+              </div>
+
+              ) : (
+                <Image src="/logo.svg" alt='Logo' width={35} height={35}  />)
+            }
           </div>
 
-        <div className={`text-[#C4C4C4] text-sm ${isOpen ? 'w-[80%] mx-auto' : ''} `}>
+        <div className={` text-sm ${isOpen ? 'w-[80%] mx-auto' : ''} `}>
           <div className={`${isOpen} py-5`}>
             <Dashboard isOpen={isOpen}/>
             <Violarions isOpen={isOpen} />
