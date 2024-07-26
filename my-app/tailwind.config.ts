@@ -28,6 +28,10 @@ const config = {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        margin: {
+          '-0.5px': '-0.5px',
+          '-0.3px': '-0.3px',
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",

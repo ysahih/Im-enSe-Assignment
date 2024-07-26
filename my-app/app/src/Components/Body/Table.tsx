@@ -1,6 +1,7 @@
 import React from 'react';
 import { RiSettings5Fill } from "react-icons/ri";
-import { Column, Worker, EquipmentCellProps} from '../../Types/types';
+import { Column, Worker} from '../../Types/types';
+import EquipmentCell from './EquipmentCell';
 
 const columns: Column[] = [
     { key: 'protectiveGloves', label: 'Protective Gloves', imgSrc: './Columns/image.svg' },
@@ -50,18 +51,120 @@ const columns: Column[] = [
       hardHat: 0,
       weldingHelmet: 0,
     },
+    {
+      name: 'Blaise DEFLOO',
+      role: 'Manager',
+      protectiveGloves: 2,
+      safetyGlasses: 0,
+      earProtection: 0,
+      maskProtection: 10,
+      kneePads: 0,
+      safetyShoes: 0,
+      coverall: 1,
+      hiVisJacket: 0,
+      safetyHarness: 0,
+      faceShield: 3,
+      hardHat: 0,
+      weldingHelmet: 0,
+    },
+    {
+      name: 'Blaise DEFLOO',
+      role: 'Manager',
+      protectiveGloves: 2,
+      safetyGlasses: 0,
+      earProtection: 0,
+      maskProtection: 10,
+      kneePads: 0,
+      safetyShoes: 0,
+      coverall: 1,
+      hiVisJacket: 0,
+      safetyHarness: 0,
+      faceShield: 3,
+      hardHat: 0,
+      weldingHelmet: 0,
+    },
+    {
+      name: 'Blaise DEFLOO',
+      role: 'Manager',
+      protectiveGloves: 2,
+      safetyGlasses: 0,
+      earProtection: 0,
+      maskProtection: 10,
+      kneePads: 0,
+      safetyShoes: 0,
+      coverall: 1,
+      hiVisJacket: 0,
+      safetyHarness: 0,
+      faceShield: 3,
+      hardHat: 0,
+      weldingHelmet: 0,
+    },
+    {
+      name: 'Blaise DEFLOO',
+      role: 'Manager',
+      protectiveGloves: 2,
+      safetyGlasses: 0,
+      earProtection: 0,
+      maskProtection: 10,
+      kneePads: 0,
+      safetyShoes: 0,
+      coverall: 1,
+      hiVisJacket: 0,
+      safetyHarness: 0,
+      faceShield: 3,
+      hardHat: 0,
+      weldingHelmet: 0,
+    },
+    {
+      name: 'Blaise DEFLOO',
+      role: 'Manager',
+      protectiveGloves: 2,
+      safetyGlasses: 0,
+      earProtection: 0,
+      maskProtection: 10,
+      kneePads: 0,
+      safetyShoes: 0,
+      coverall: 1,
+      hiVisJacket: 0,
+      safetyHarness: 0,
+      faceShield: 3,
+      hardHat: 0,
+      weldingHelmet: 0,
+    },
+    {
+      name: 'Blaise DEFLOO',
+      role: 'Manager',
+      protectiveGloves: 2,
+      safetyGlasses: 0,
+      earProtection: 0,
+      maskProtection: 10,
+      kneePads: 0,
+      safetyShoes: 0,
+      coverall: 1,
+      hiVisJacket: 0,
+      safetyHarness: 0,
+      faceShield: 3,
+      hardHat: 0,
+      weldingHelmet: 0,
+    },
+    {
+      name: 'Blaise DEFLOO',
+      role: 'Manager',
+      protectiveGloves: 2,
+      safetyGlasses: 0,
+      earProtection: 0,
+      maskProtection: 10,
+      kneePads: 0,
+      safetyShoes: 0,
+      coverall: 1,
+      hiVisJacket: 0,
+      safetyHarness: 0,
+      faceShield: 3,
+      hardHat: 0,
+      weldingHelmet: 0,
+    },
   ];
   
-
-const EquipmentCell: React.FC<EquipmentCellProps> = ({ value }) => (
-  <td className="border-b border-[#DCDCDC] p-2">
-    <div className={`h-11 mx-auto flex justify-center items-center w-11 rounded-full ${
-      value > 0 ? (value >= 10 ? 'bg-[red] text-white' : 'bg-[yellow] text-[black]') : ''
-    }`}>
-      {value > 0 ? value : '-'}
-    </div>
-  </td>
-);
 
 
 const WorkersTable: React.FC = () => {
