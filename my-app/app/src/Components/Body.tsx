@@ -65,13 +65,13 @@ const WorkersTable: React.FC = () => {
 
   return (
     <div className="">
-      <table className="min-w-full bg-white border border-[#DCDCDC] text-[#737373]">
+      <table className="min-w-full bg-white border border-[#DCDCDC] text-[#C4C4C4]">
         <thead>
           <tr>
             <th className="border p-2">
               <RiSettings5Fill className='size-[20px]'/>
             </th>
-            <th className="border font-medium text-xs p-1">Workers</th>
+            <th className="border font-medium text-xs text-[#909090] p-1">Workers</th>
 
             {columns.map((column, index) => (
               <th key={index} className="p-1">
@@ -86,7 +86,7 @@ const WorkersTable: React.FC = () => {
           {workers.map((worker, index) => (
             <tr key={index}>
             <td className="border border-[#DCDCDC] p-1">
-              <p className='flex justify-center '>
+              <p className='flex text-[#909090] justify-center '>
                 {index + 1}
               </p>
             </td>
@@ -106,75 +106,74 @@ const WorkersTable: React.FC = () => {
               </div>
             </td>
 
-            <td className={`border border-[#DCDCDC] p-1 ${worker.protectiveGloves > 0 ? (worker.protectiveGloves >= 10 ? 'bg-red  text-white' : 'bg-yellow text-[black]') : ''}`}> 
-
-            <div>
+            <td className="border border-[#DCDCDC] p-1"> 
+            <div className={`h-11 mx-auto flex justify-center items-center w-11 rounded-full  ${worker.protectiveGloves > 0 ? (worker.protectiveGloves >= 10 ? 'bg-[red]  text-white' : 'bg-[yellow] text-[black]') : ''}`}>
               {worker.protectiveGloves > 0 ? worker.protectiveGloves : '-'} 
             </div>
              </td>
             
-            <td className={`border border-[#DCDCDC] p-1 ${worker.safetyGlasses > 0 ? ( worker.safetyGlasses >= 10 ? 'bg-red  text-white' : 'bg-yellow text-[black]') : ''}`}> 
-            <div>
+            <td className="border border-[#DCDCDC] p-1"> 
+            <div className={`h-11 mx-auto flex justify-center items-center w-11 rounded-full  ${worker.safetyGlasses > 0 ? ( worker.safetyGlasses >= 10 ? 'bg-[red]  text-white' : 'bg-[yellow] text-[black]') : ''}`}>
               {worker.safetyGlasses > 0 ? worker.safetyGlasses : '-'}
             </div>
              </td>
             
-            <td className={`border border-[#DCDCDC] p-1 ${worker.earProtection > 0 ?  (worker.earProtection >= 10 ? 'bg-red  text-white' : 'bg-yellow text-[black]') : ''}`}> 
-            <div>
+            <td className="border border-[#DCDCDC] p-1"> 
+            <div className={`h-11 mx-auto flex justify-center items-center w-11 rounded-full  ${worker.earProtection > 0 ?  (worker.earProtection >= 10 ? 'bg-[red]  text-white' : 'bg-[yellow] text-[black]') : ''}`}>
               {worker.earProtection > 0 ? worker.earProtection : '-'}
             </div>
              </td>
             
-            <td className={`border border-[#DCDCDC] p-1 ${worker.maskProtection > 0 ?  (worker.maskProtection >= 10  ? 'bg-red  text-white' : 'bg-yellow text-[black]') : ''}`}> 
-            <div>
+            <td className="border border-[#DCDCDC] p-1"> 
+            <div className={`h-11 mx-auto flex justify-center items-center w-11 rounded-full  ${worker.maskProtection > 0 ?  (worker.maskProtection >= 10  ? 'bg-[red]  text-white' : 'bg-[yellow] text-[black]') : ''}`}>
               {worker.maskProtection > 0 ? worker.maskProtection : '-'}
             </div>
             </td>
             
-            <td className={`border border-[#DCDCDC] p-1 ${worker.kneePads > 0 ?  (worker.kneePads >= 10 ? 'bg-red  text-white' : 'bg-yellow text-[black]') : ''}`}> 
-            <div>
+            <td className="border border-[#DCDCDC] p-1"> 
+            <div className={`h-11 mx-auto flex justify-center items-center w-11 rounded-full  ${worker.kneePads > 0 ?  (worker.kneePads >= 10 ? 'bg-[red]  text-white' : 'bg-[yellow] text-[black]') : ''}`}>
               {worker.kneePads > 0 ? worker.kneePads : '-'}
             </div>
              </td>
             
-            <td className={`border border-[#DCDCDC] p-1 ${worker.safetyShoes > 0 ?  (worker.safetyShoes >= 10 ? 'bg-red  text-white' : 'bg-yellow text-[black]') : ''}`}> 
-            <div>
+            <td className="border border-[#DCDCDC] p-1"> 
+            <div className={`h-11 mx-auto flex justify-center items-center w-11 rounded-full  ${worker.safetyShoes > 0 ?  (worker.safetyShoes >= 10 ? 'bg-[red]  text-white' : 'bg-[yellow] text-[black]') : ''}`}>
               {worker.safetyShoes > 0 ? worker.safetyShoes : '-'}
             </div>
              </td>
             
-            <td className={`border border-[#DCDCDC] p-1 ${worker.coverall > 0 ?  (worker.coverall >= 10 ? 'bg-red  text-white' : 'bg-yellow text-[black]') : ''}`}> 
-            <div>
+            <td className="border border-[#DCDCDC] p-1"> 
+            <div className={`h-11 mx-auto flex justify-center items-center w-11 rounded-full  ${worker.coverall > 0 ?  (worker.coverall >= 10 ? 'bg-[red]  text-white' : 'bg-[yellow] text-[black]') : ''}`}>
               {worker.coverall > 0 ? worker.coverall : '-'}
             </div>
              </td>
             
-            <td className={`border border-[#DCDCDC] p-1 ${worker.hiVisJacket > 0 ?  (worker.hiVisJacket >= 10  ? 'bg-red  text-white' : 'bg-yellow text-[black]') : ''}`}> 
-            <div>
+            <td className="border border-[#DCDCDC] p-1"> 
+            <div className={`h-11 mx-auto flex justify-center items-center w-11 rounded-full  ${worker.hiVisJacket > 0 ?  (worker.hiVisJacket >= 10  ? 'bg-[red]  text-white' : 'bg-[yellow] text-[black]') : ''}`}>
               {worker.hiVisJacket > 0 ? worker.hiVisJacket : '-'}
             </div>
              </td>
             
-            <td className={`border border-[#DCDCDC] p-1 ${worker.safetyHarness > 0 ?  (worker.safetyHarness >= 10 ? 'bg-red  text-white' : 'bg-yellow text-[black]') : ''}`}> 
-            <div>
+            <td className="border border-[#DCDCDC] p-1"> 
+            <div className={`h-11 mx-auto flex justify-center items-center w-11 rounded-full  ${worker.safetyHarness > 0 ?  (worker.safetyHarness >= 10 ? 'bg-[red]  text-white' : 'bg-[yellow] text-[black]') : ''}`}>
               {worker.safetyHarness > 0 ? worker.safetyHarness : '-'}
             </div>
              </td>
             
-            <td className={`border border-[#DCDCDC] p-1 ${worker.faceShield > 0 ?  (worker.faceShield >= 10 ? 'bg-red  text-white' : 'bg-yellow text-[black]') : ''}`}> 
-            <div>
+            <td className="border border-[#DCDCDC] p-1"> 
+            <div className={`h-11 mx-auto flex justify-center items-center w-11 rounded-full  ${worker.faceShield > 0 ?  (worker.faceShield >= 10 ? 'bg-[red]  text-white' : 'bg-[yellow] text-[black]') : ''}`}>
               {worker.faceShield > 0 ? worker.faceShield : '-'}
             </div>
              </td>
             
-            <td className={`border border-[#DCDCDC] p-1 ${worker.hardHat > 0 ?  (worker.hardHat >= 10 ? 'bg-red  text-white' : 'bg-yellow text-[black]') : ''}`}> 
-            <div>
+            <td className="border border-[#DCDCDC] p-1"> 
+            <div className={`h-11 mx-auto flex justify-center items-center w-11 rounded-full  ${worker.hardHat > 0 ?  (worker.hardHat >= 10 ? 'bg-[red]  text-white' : 'bg-[yellow] text-[black]') : ''}`}>
               {worker.hardHat > 0 ? worker.hardHat : '-'}
             </div>
              </td>
             
-            <td className={`border border-[#DCDCDC] p-1 ${worker.weldingHelmet > 0 ?  (worker.weldingHelmet >= 10 ? 'bg-red  text-white' : 'bg-yellow text-[black]') : ''}`}> 
-            <div>
+            <td className="border border-[#DCDCDC] p-1"> 
+            <div className={`h-11 mx-auto flex justify-center items-center w-11 rounded-full  ${worker.weldingHelmet > 0 ?  (worker.weldingHelmet >= 10 ? 'bg-[red]  text-white' : 'bg-[yellow] text-[black]') : ''}`}>
             {worker.weldingHelmet > 0 ? worker.weldingHelmet : '-'}
             </div>
              </td>
