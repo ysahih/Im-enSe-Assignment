@@ -29,7 +29,7 @@ const Sidebar :  React.FC<Props> = ({ isOpen, toggle }) => {
     <div ref={ref} className="">
       <div className="w-full h-full flex ">
         <div
-          className={`border border-[#C4C4C4] fixed transition-width h-full bg-white duration-300 ] ${
+          className={`border border-[#C4C4C4] fixed transition-width h-full bg-white duration-300  ${
             isOpen ? "w-[250px]" : "w-[65px]"
           }`}
         >
@@ -67,15 +67,17 @@ const Sidebar :  React.FC<Props> = ({ isOpen, toggle }) => {
         </div>
 
         </div>
-        <div className="h-[96px] absolute bottom-0 w-[250px]">
+        {isOpen && (
+        <div className={`h-[100px] absolute bottom-0 w-[250px] transition-all duration-900 delay-900`}>
           <hr className=""/>
           <div className="text-[#939393] p-3">
-            <h1 className="font-medium text-[13px] pb-2">@ App name 2021</h1>
-            <p className="break-words text-[11px]">Lorem ipsum dolor sit amet, consectetur
+            <h1 className="font-medium text-[13px]">@ App name 2021</h1>
+            <p className="break-words text-[11px] mt-1">Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit, sed do eiusmod tempor
                 incididunt ut.</p>
           </div>
         </div>
+        )}
       </div>
     </div>
   );
