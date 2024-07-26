@@ -60,7 +60,7 @@ const Language = () => {
               </button>
               {isDropdownOpen && (
                 <div
-                  className="absolute top-14 right-[230px] list-none bg-white text-[red] rounded-lg shadow" 
+                  className="absolute top-14 right-[230px] rounded-[5px] list-none bg-white text-[red] rounded-lg shadow" 
                   ref={ref} 
                   id="language-dropdown-menu"
                 >

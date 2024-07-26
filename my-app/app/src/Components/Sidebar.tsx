@@ -8,7 +8,7 @@ import Contracotrs from "./Sidebar/Contractors";
 import Dashboard from "./Sidebar/Dashboard";
 import Violarions from "./Sidebar/Violations";
 import PPEs from "./Sidebar/PPEs";
-
+import { useEffect } from "react";
 
 
 interface Props {
@@ -18,7 +18,17 @@ interface Props {
 
 const Sidebar :  React.FC<Props> = ({ isOpen, toggle }) => {
 
+  const [isFoted, setisFoted] = useState(false);
+  useEffect (() => {
+    if (isOpen) {
+      setTimeout(() => {
+        setisFoted(true);
+      }, 300);
+    }
+    else 
+      setisFoted(false);
 
+  }, [isOpen]);
 
   const ref = useClickAway(() => {
     toggle();
@@ -67,8 +77,8 @@ const Sidebar :  React.FC<Props> = ({ isOpen, toggle }) => {
         </div>
 
         </div>
-        {isOpen && (
-        <div className={`h-[100px] absolute bottom-0 w-[250px] transition-all duration-900 delay-900`}>
+        {isOpen && isFoted && (
+        <div className={`h-[100px] absolute bottom-0 w-[250px] transition-all duration-1000 delay-1000`}>
           <hr className=""/>
           <div className="text-[#939393] p-3">
             <h1 className="font-medium text-[13px]">@ App name 2021</h1>

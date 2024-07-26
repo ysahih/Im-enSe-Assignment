@@ -12,7 +12,7 @@ const Violarions: React.FC<Props> = ({ isOpen }) => {
     const [showPopup, setShowPopup] = useState(false);
 
     return (
-      <div className={`relative inline-block flex items-center justify-center px-2 gap-2 h-10 cursor-pointer rounded-md  text-[#C4C4C4] ${isOpen ? 'text-white bg-[#42A4DF]' : '' }`}
+      <div className={`relative inline-block flex items-center justify-center px-2 gap-2 h-10 cursor-pointer rounded-[5px]  text-[#C4C4C4] ${isOpen ? 'text-white bg-[#42A4DF]' : '' }`}
        
           onMouseEnter={() => setShowPopup(true)}
           onMouseLeave={() => setShowPopup(false)}
