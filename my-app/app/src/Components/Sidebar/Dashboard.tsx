@@ -20,9 +20,9 @@ const Dashboard: React.FC<Props> = ({ isOpen }) => {
         className={`size-[20px] ${isOpen ? "" : "hover:text-[#42A4DF]"}`}
       />
       {showPopup && !isOpen && (
-        <div className="relative left-14 w-[80px] bg-[#343434] text-white text-center py-2 text-xs rounded shadow-lg z-10">
+        <div className="absolute left-14 w-[80px] bg-[#343434] text-white text-center py-2 text-xs rounded shadow-lg  z-10">
           Dashboard
-          <div className="absolute top-1/2 -left-3 transform -translate-y-1/2">
+          <div className="absolute top-1/2 -left-2 transform -translate-y-1/2">
             <div className="w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-r-8 border-r-[#343434]"></div>
           </div>
         </div>
