@@ -1,7 +1,6 @@
 import { RiSettings5Fill } from "react-icons/ri";
 import * as React from 'react';
 import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
 // import Checkbox from '@mui/material/Checkbox';
 import { useState } from "react";
 import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu"
@@ -15,11 +14,13 @@ import {
 
 
 
-type Checked = DropdownMenuCheckboxItemProps["checked"]
+// type Checked = DropdownMenuCheckboxItemProps["checked"]
 
 
 
-const TableSettings: React.FC = () => {
+const TableSettings = () => {
+
+    // const context = 
 
   return (
     <DropdownMenu>
@@ -34,7 +35,7 @@ const TableSettings: React.FC = () => {
         <FormGroup className="p-2">
             <h1 className="text-xs font-medium text-[#989797]">Select columns to display</h1>
             {columns.map((column, index) => (
-            //   <FormControlLabel control={<Checkbox defaultChecked className="bg-red-500 text-red-500" />}   label={column.label} key={index} />
+
                 <div className="flex items-center py-2 gap-2">
                     <input
                         // checked

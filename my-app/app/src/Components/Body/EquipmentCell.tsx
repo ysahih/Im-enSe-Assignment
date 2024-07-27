@@ -1,6 +1,6 @@
 "use client"
 import * as React from "react"
-import EquipmentCellProps from '../../Types/types';
+// import EquipmentCellProps from '../../Types/types';
 import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu"
 import {
   DropdownMenu,
@@ -9,26 +9,11 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 
-type Checked = DropdownMenuCheckboxItemProps["checked"]
-
-
-
-const Cell: React.FC<EquipmentCellProps> = ({ value }) => (
-
-    <td className="border-b border-[#DCDCDC] p-2">
-      <div className={`h-11 cursor-pointer mx-auto flex justify-center items-center w-11 rounded-full ${
-        value > 0 ? (value >= 10 ? 'bg-[red] text-white' : 'bg-[yellow] text-[black]') : ''
-      }`}>
-        {value > 0 ? value : '-'}
-      </div>
-    </td>
-  );
-
+type EquipmentCellProps = {
+    value: number;
+}
   
   const EquipmentCell: React.FC<EquipmentCellProps> = ({ value }) => {
-    const [showStatusBar, setShowStatusBar] = React.useState<Checked>(true)
-    const [showActivityBar, setShowActivityBar] = React.useState<Checked>(false)
-    const [showPanel, setShowPanel] = React.useState<Checked>(false)
 
   return (
     <DropdownMenu>

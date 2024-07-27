@@ -20,9 +20,10 @@ export interface Column {
     hardHat: number;
     weldingHelmet: number;
   }
-  export default interface EquipmentCellProps {
-    value: number;
-  }
+
+  // export default interface EquipmentCellProps {
+  //   value: number;
+  // }
   
  
 

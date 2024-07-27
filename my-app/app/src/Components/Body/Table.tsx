@@ -4,6 +4,8 @@ import { Column, Worker} from '../../Types/types';
 import EquipmentCell from './EquipmentCell';
 import columns from '../Data/data';
 import workers from '../Data/worker';
+import { useState } from 'react';
+import ColumnContext from '../Context/Context';
 
 
 const WorkersTable: React.FC = () => {
@@ -62,12 +64,16 @@ const WorkersTable: React.FC = () => {
   );
 };
 
-const Table = () => {
+const Table: React.FC = () => {
+  const [columnsState, setColumnsState] = useState<Column[]>(columns);
+
   return (
-    <div className='h-[95%] mt-4 w-full'>
-      <WorkersTable />
-    </div>
+    <ColumnContext.Provider value={{columnsState, setColumnsState }}>
+      <div className='h-[95%] mt-4 w-full'>
+        <WorkersTable />
+      </div>
+    // </ColumnContext.Provider>
   );
-}
+};
 
 export default Table;
