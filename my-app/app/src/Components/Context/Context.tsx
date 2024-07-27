@@ -8,7 +8,7 @@ export class columnContext {
     setColumnsState: React.Dispatch<React.SetStateAction<Column[]>> = () => {};
 }
 
-const ColumnContext = createContext<columnContext | undefined>(undefined);
+const ColumnContext = createContext<columnContext | null>(null);
 
 export default ColumnContext;
 
